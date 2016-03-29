@@ -36,7 +36,8 @@ $query = "INSERT INTO questions (q_content, q_time, user_id, kind_id, q_vote)
 			VALUES ('" . $question . "', NOW(), '" . $usr_id . "', '1', '0');";
 
 if (mysqli_query($conn, $query)) {
-	header("Location: ../main.php");
+	//header("Location: ../main.php");
+	header("Location: ../index.php");
 	//print($usr_id);
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conn);
