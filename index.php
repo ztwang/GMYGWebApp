@@ -15,17 +15,15 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<link href="../bootstrap/docs/examples/signin/signin.css" rel="stylesheet">
 	<link href="css/my_css.css" rel="stylesheet">
-	<script src="../bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
 	<title>GMYG</title>
 </head>
 
 <body onload="updateQues();">
 <div class='container-mine'>
 	<div class="headers">
-		<h3 class="header">What matters? <?php echo $usr_id ?></h1>
+		<h3 class="header">What matters? <?php echo $usr_id ?></h3>
 	</div>
 	
 		<div class="panel-body show-ques">
@@ -56,5 +54,4 @@
 </div>
 </body>
 <script src="js/index_js.js"></script>
-<script src="../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 </html>

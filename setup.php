@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	if(isset($_SESSION['usr_id']))
+		header("Location: index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,16 +12,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    
     <link rel="icon" href="../../favicon.ico">
 
     <title>Set up</title>
 	<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="../bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<link href="css/my_css.css" rel="stylesheet">
     <link href="../bootstrap/docs/examples/signin/signin.css" rel="stylesheet">
-	<script src="../bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
-
 </head>
 
 <body>
@@ -31,5 +30,4 @@
 	</form>
 </div>
 </body>
-<script src="../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 </html>

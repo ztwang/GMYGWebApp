@@ -22,7 +22,7 @@ $query = "INSERT INTO questions (q_content, q_time, user_id, kind_id, q_vote)
 			VALUES ('" . $question . "', NOW(), '1', '1', '0');";
 
 if (mysqli_query($conn, $query)) {
-	header("Location: FilterQ.html");
+	header("Location: ../FilterQ.html");
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conn);
 }

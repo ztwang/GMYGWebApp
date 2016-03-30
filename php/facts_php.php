@@ -16,15 +16,13 @@
     	die("Connection failed: " . mysqli_connect_error());
 	}
 	
-	$query = "select q_content,q_vote,q_id from questions where kind_id=4 order by q_vote desc";
+	$query = "select fact_content,fact_status from facts";
 
 	if ($result = mysqli_query($conn, $query)) {
-	 	print("<table class='table table-hover'>");
+	 	print("<table class='table'>");
 		while($row = mysqli_fetch_row($result)){
 			print("<tr>
-				<td>" . $row[0] . "</td>
-				<td><input class='btn btn-sm btn-danger' type='button' value='-' 
-				onclick='refresh(". (int)$row[2] . ");' /></td>
+					<td class='on-screen-res'>" . $row[0] . "</td>
 				</tr>");
 		}
 		print("</table>");

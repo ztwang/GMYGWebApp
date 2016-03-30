@@ -1,3 +1,6 @@
+body{
+	height:100%;
+}
 h3{
 	position:absolute;
 	top:0;
@@ -5,6 +8,7 @@ h3{
 	text-align: center;
 }
 p{
+	padding-top: 30px;
 	margin-left: 20px;
 }
 .headers{
@@ -39,4 +43,10 @@ p{
 }
 .content-td{
 	width:70%;
+}
+.tr-shown{
+	background-color: #ffb3b3;
+}
+.tr-high-voted{
+	background-color: #b3ffcc;
 }

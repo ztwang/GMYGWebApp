@@ -3,7 +3,6 @@
 	$username = "root";
 	$password = "ignite";
 	$dbname = "ignite";
-	$threshold = 0;
 	
 	/*$servername = "58.64.190.104";
 	$username = "sq_ivyhhhhh";
@@ -17,18 +16,15 @@
     	die("Connection failed: " . mysqli_connect_error());
 	}
 	
-	$query = "select q_content,q_vote,q_id from questions where kind_id=1 and q_vote > " . $threshold . " order by q_vote desc";
+	$query = "select q_content,q_vote,q_id from questions where kind_id=4 order by q_vote desc";
 
 	if ($result = mysqli_query($conn, $query)) {
 	 	print("<table class='table table-hover'>");
 		while($row = mysqli_fetch_row($result)){
 			print("<tr>
-				<td>" . $row[0] . "</td>
-				<td>" . $row[1] . "</td>
-				<td><input class='btn btn-sm btn-danger' type='button' value='Remove' 
+				<td class='content-td'>" . $row[0] . "</td>
+				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='-' 
 				onclick='refresh(". (int)$row[2] . ");' /></td>
-				<td><input class='btn btn-sm btn-danger' type='button' value='Pop' 
-				onclick='popup(". (int)$row[2] . ");' /></td>
 				</tr>");
 		}
 		print("</table>");
