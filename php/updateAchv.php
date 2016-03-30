@@ -21,9 +21,10 @@
 	}
 	
 	$fact_id=(int)$fact_id;
-	$query = "update facts set fact_status=1 where fact_id=" . $fact_id . ";";
+	$query = "update facts set fact_status=1 where fact_id=" . $_POST['f_id'] . ";";
 	
 	if (mysqli_query($conn, $query)) {
+		//print("xixi");
 	} else {
     	echo "Error: " . $query . "<br>" . mysqli_error($conn);
 	}

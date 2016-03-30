@@ -23,9 +23,11 @@
 <body onload="updateQues();">
 <div class='container-mine'>
 	<div class="headers">
-		<h3 class="header">What matters? <?php echo $usr_id ?></h3>
+		<header class="header-au">
+			<div class="header-left"><a href"#">&lt; Story</a></div>
+			<div class="header-right"><a href="asked_q.php">History &gt;</a></div>
+		</header>
 	</div>
-	
 		<div class="panel-body show-ques">
     	    <table class='table table-hover'>
        		 	<thead>

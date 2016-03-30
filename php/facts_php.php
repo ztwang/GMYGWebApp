@@ -16,7 +16,7 @@
     	die("Connection failed: " . mysqli_connect_error());
 	}
 	
-	$query = "select fact_content,fact_status from facts";
+	$query = "select fact_content,fact_status from facts where fact_status = 1";
 
 	if ($result = mysqli_query($conn, $query)) {
 	 	print("<table class='table'>");

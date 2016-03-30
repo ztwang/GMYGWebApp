@@ -53,7 +53,8 @@
 		};
 		xhttp.open("POST", "php/updateAchv.php", true);
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhttp.send("fact_id="+f_id);
+		xhttp.send("f_id="+f_id);
+		updateFacts();
 	}
 	
 	

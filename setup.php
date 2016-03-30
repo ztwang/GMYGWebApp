@@ -22,6 +22,12 @@
 </head>
 
 <body>
+	<div class="headers">
+		<header class="header-au">
+			<div class="header-left">&lt; left</div>
+			<div class="header-right">right &gt;</div>
+		</header>
+	</div>
 <div class="container">
 	<form class="form-signin" method="post" action="php/insertUser.php" >
 		<h2 class="form-signin-heading">Enter your name: </h2>

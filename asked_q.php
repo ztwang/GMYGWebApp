@@ -24,8 +24,14 @@
 	<script src="../bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
 </head>
 <body onload="fetchAsked();">
-<div class="container">
-	<div class="headers"><h3 class="header">Responses you made <?php echo $usr_id ?></h3></div>
+
+	<div class="headers">
+		<header class="header-au">
+			<div class="header-left"><a href="index.php">&lt; Back</a></div>
+		</header>
+	</div>
+	<div class="container">
+	<div class="headers"><h3 class="headers">Responses you made <?php echo $usr_id ?></h3></div>
 	<div class="text-content"><p id="fetchAsked"></p></div>
 </div>
 </body>
