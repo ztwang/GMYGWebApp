@@ -38,11 +38,11 @@ header{
 }
 .show-ques{
    	width:100%;
-   	height: 400px;
+   	height: 390px;
     overflow-y: scroll;
 }
 .f-bottom{
-	position:absolute;
+	position:fixed;
    	bottom:3%;
    	width:100%;
    	height:10%;
