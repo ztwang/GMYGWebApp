@@ -1,7 +1,13 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['usr_id']))
-		$_SESSION['usr_id'] = $_GET['u_id'];
+	if(!isset($_SESSION['usr_id'])){
+		if(!is_null($_GET['u_id'])){
+			$_SESSION['usr_id'] = $_GET['u_id'];
+			}
+		else
+			header('Location: setup.php');
+		
+	}
 	$usr_id = $_SESSION['usr_id'];
 ?>
 <!doctype html>
@@ -32,7 +38,7 @@
     	    <table class='table table-hover'>
        		 	<thead>
         		<tr>
-	        		<th class='content-td' style=''>Response</th>
+	        		<th class='content-td' style=''>Questions</th>
    		     		<th class='v-btn-td'>Votes</th>
    		     		<th class='v-btn-td'></th>
    		     	</tr>
@@ -45,7 +51,7 @@
 		<div class="forms">
 			<form method="post" action="php/questions.php">
   				<div class="input-group">
-  					<input id="btn-input" type="text" name="ques" class="form-control input-lg" placeholder="Type your message here..." />
+  					<input id="btn-input" type="text" name="ques" class="form-control input-lg" placeholder="e.g. Why do you have a gun?" required />
      				<span class="input-group-btn">
      					<input class="btn btn-lg btn-danger btn-block" type="submit" value="send" name="askQ" />
      				</span>
@@ -56,4 +62,5 @@
 </div>
 </body>
 <script src="js/index_js.js"></script>
+<script src="js/jquery.min.js"></script>
 </html>

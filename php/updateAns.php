@@ -1,16 +1,15 @@
 <?php
 
 //test
-	$servername = "localhost";
+	/*$servername = "localhost";
 	$username = "root";
 	$password = "ignite";
-	$dbname = "ignite";
+	$dbname = "ignite";*/
 	
-	/*$servername = "58.64.190.104";
+	$servername = "58.64.190.104";
 	$username = "sq_ivyhhhhh";
 	$password = "whan1Whan1";
-	$dbname = "sq_ivyhhhhh";*/
-	
+	$dbname = "sq_ivyhhhhh";
 	$q_id = $_POST['q_id'];
 	
 // Create connection

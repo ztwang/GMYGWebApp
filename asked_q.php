@@ -31,7 +31,7 @@
 		</header>
 	</div>
 	<div class="container">
-	<div class="headers"><h3 class="headers">Responses you made <?php echo $usr_id ?></h3></div>
+	<div class="headers"><h3 class="headers">Questions you asked</h3></div>
 	<div class="text-content"><p id="fetchAsked"></p></div>
 </div>
 </body>

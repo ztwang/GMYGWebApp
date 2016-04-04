@@ -18,23 +18,14 @@
     <title>Set up</title>
 	<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/my_css.css" rel="stylesheet">
-    <link href="../bootstrap/docs/examples/signin/signin.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 </head>
-<style>
-html { 
-  background: url(assets/login_bg.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 10;
-}
-</style>
+
 <body>
 	<div class="headers">
 		<header class="header-au">
-			<div class="header-left">&lt; left</div>
-			<div class="header-right">right &gt;</div>
+			<!--div class="header-left">&lt; left</div-->
+			<!--div class="header-right">right &gt;</div-->
 		</header>
 	</div>
 <div>

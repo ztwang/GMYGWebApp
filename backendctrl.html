@@ -18,20 +18,26 @@
     <link href="css/projector_css.css" rel="stylesheet">
   </head>
 <body onload="updateContents();">
+<p style="font-size: 50px; padding-top:0px; text-align: center" class="change-color-btn">
+	<a href="#" role="button" id="plus" onclick="bgplus()">+</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#" role="button" id="minus" onclick="bgminus()">-</a>
+</p>
 <section class="div-container">
-	<div class="div-responses">
+	<div class="div-responses" id="div-resp-id">
 		<div class="div-content">
-			<p class='proj-header'>Responses</p>
+			<p class='proj-header'>Questions</p>
 			<p id="allQues"></p>
 		</div>
 	</div>
-	<div class="div-facts">
+	<div class="div-facts" id="div-fact-id">
 		<div class='div-content'>
-			<p class='proj-header'>Facts</p>
+			<p class='proj-header'>Achievements</p>
 			<p id='facts-content'></p>
 		</div>
 	</div>
 </section>
 </body>
 <script src="js/projector_q_js.js"></script>
+<script src="js/shown_js.js"></script>
 </html>

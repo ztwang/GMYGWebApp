@@ -38,17 +38,21 @@ create table keywords(
 );
 
 create table facts(
-	fact_id int(11) not null auto_increment,
-	fact_content varchar(20) not null,
-	fact_status varchar(20) not null,
+	fact_id smallint not null auto_increment,
+	fact_content varchar(200) not null,
+	fact_status varchar(1) not null default 0,
 	primary key (fact_id)
-);
+) auto_increment=1;
 
 //set up kinds
 insert into kinds (kind_name) values ('valid') ('irrelevant') ('answered') ('show') ('expired');
 
 //set up default questions
+
+
 //set up facts
+load data local infile '/Library/WebServer/Documents/GMYGWebApp/factdata.txt' into table facts (fact_content);
+
 
 //reset
 
@@ -60,5 +64,6 @@ alter table questions auto_increment = 1;
 alter table user_votes auto_increment = 1;
 
 insert into users (user_name) values ('admin');
+insert into questions (q_content, q_time, user_id, q_vote, kind_id) values ('Why do you have a gun?',NOW(),1,0,1);
 
 UPDATE facts SET fact_status = 0;

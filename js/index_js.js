@@ -23,3 +23,4 @@
 		xhttp.send("q_id="+q_id+"&q_vote="+q_vote);
 		updateQues();
 	}
+	

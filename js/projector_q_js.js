@@ -2,6 +2,7 @@
 	function updateContents(){
 		updateQues();
 		updateFacts();
+		updatebgcolor();
 	}
 	
 	function updateQues(){
@@ -56,5 +57,7 @@
 		xhttp.send("f_id="+f_id);
 		updateFacts();
 	}
-	
+	function changebgcolor(){
+		
+	}
 	
