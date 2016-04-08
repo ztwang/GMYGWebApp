@@ -1,33 +1,3 @@
-	function indexOnLoad(){
-		updateQues();
-		clicked();
-	}
-	function updateQues(){
-		var xhttp;
-		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function(){
-			if(xhttp.readyState == 4 && xhttp.status == 200){
-				document.getElementById("allQues").innerHTML = xhttp.responseText;
-			}
-		};
-		xhttp.open("GET", "php/load_ques.php", true);
-		xhttp.send();
-		setTimeout(updateQues,3000);
-	}
-	function refresh(q_id, q_vote){
-		var xhttp;
-		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function(){
-			if(xhttp.readyState == 4 && xhttp.status == 200){
-				console.log(xhttp.responseText);
-			}
-		};
-		xhttp.open("POST", "php/updateVote.php", true);
-		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhttp.send("q_id="+q_id+"&q_vote="+q_vote);
-		updateQues();
-	}
-	
 var pre_status = 0;
 var cur_status = 0;
 var count = 0;
@@ -43,7 +13,7 @@ function updatestatus(){
     		//console.log("pre:"+pre_status);
   		}
 	};
-	xmlhttp.open("GET","txts/prestatus.txt",true);
+	xmlhttp.open("GET","../txts/prestatus.txt",true);
 	xmlhttp.send();
 	
 	var xmlhttp1 = new XMLHttpRequest();
@@ -55,7 +25,7 @@ function updatestatus(){
     		//console.log("cur:"+cur_);
   		}
 	};
-	xmlhttp1.open("GET","txts/curstatus.txt",true);
+	xmlhttp1.open("GET","../txts/curstatus.txt",true);
 	xmlhttp1.send();
 	//setTimeout(updatestatus, 2000);
 	//console.log(""+pre_status+""+cur_status);
@@ -1367,4 +1337,3 @@ exports.colorLuminance = colorLuminance;
   }
 
 })(window, document);
-	

@@ -11,7 +11,7 @@
 	$password = "whan1Whan1";
 	$dbname = "sq_ivyhhhhh";*/
 	
-	$q_id = $_POST['q_id'];
+	$fact_id = $_POST['f_id'];
 	
 // Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -20,10 +20,11 @@
     	die("Connection failed: " . mysqli_connect_error());
 	}
 	
-	$q_id=(int)$q_id;
-	$query = "update questions set kind_id=3 where q_id=" . $q_id . ";";
+	$fact_id=(int)$fact_id;
+	$query = "update facts set fact_status=0 where fact_id=" . $_POST['f_id'] . ";";
 	
 	if (mysqli_query($conn, $query)) {
+		//print("xixi");
 	} else {
     	echo "Error: " . $query . "<br>" . mysqli_error($conn);
 	}

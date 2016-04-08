@@ -1,13 +1,15 @@
 <?php
-	/*$servername = "localhost";
+	$servername = "localhost";
 	$username = "root";
 	$password = "ignite";
-	$dbname = "ignite";*/
-	$threshold = -1;
-	$servername = "58.64.190.104";
+	$dbname = "ignite";
+	
+	/*$servername = "58.64.190.104";
 	$username = "sq_ivyhhhhh";
 	$password = "whan1Whan1";
-	$dbname = "sq_ivyhhhhh";
+	$dbname = "sq_ivyhhhhh";*/
+	
+	$threshold = -1;
 // Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -23,11 +25,11 @@
 			print("<tr>
 				<td>" . $row[0] . "</td>
 				<td>" . $row[1] . "</td>
-				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='Remove' 
-				onclick='refresh(". (int)$row[2] . ");' /></td>
-				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='Pop' 
+				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='R' 
+				onclick='refreshAllQ(". (int)$row[2] . ");' /></td>
+				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='P' 
 				onclick='popup(". (int)$row[2] . ");' /></td>
-				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='Vote' 
+				<td class='vote-btn-td'><input class='btn btn-sm btn-danger' type='button' value='V' 
 				onclick='voteQues(". (int)$row[2] . ",".(int)$row[1].");' /></td>
 				</tr>");
 		}

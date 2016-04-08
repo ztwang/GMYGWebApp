@@ -1,15 +1,15 @@
 <?php
 	session_start();
 	$usr_id = $_SESSION['usr_id'];
-	/*$servername = "localhost";
+	$servername = "localhost";
 	$username = "root";
 	$password = "ignite";
-	$dbname = "ignite";*/
+	$dbname = "ignite";
 	
-	$servername = "58.64.190.104";
+	/*$servername = "58.64.190.104";
 	$username = "sq_ivyhhhhh";
 	$password = "whan1Whan1";
-	$dbname = "sq_ivyhhhhh";
+	$dbname = "sq_ivyhhhhh";*/
 	
 	$q_id = $_POST['q_id'];
 	$q_vote = $_POST['q_vote'];

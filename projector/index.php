@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../favicon.ico">
-
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
     <title>Give me your gun</title>
 
     <!-- Bootstrap core CSS -->
@@ -17,6 +21,12 @@
     <!--link href="../../bootstrap/docs/examples/signin/signin.css" rel="stylesheet"-->
 	<link href="../css/projector_css.css" rel="stylesheet">
   </head>
+  <style>
+  	h4{
+  		font-family: 'Inconsolata', serif;
+  		font-size: 30px;
+  	}
+  </style>
 <body onload="updateContents();">
 <section class="div-container">
 	<div class="div-responses" id="div-resp-id">

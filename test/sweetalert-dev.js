@@ -1,36 +1,5 @@
-	function indexOnLoad(){
-		updateQues();
-		clicked();
-	}
-	function updateQues(){
-		var xhttp;
-		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function(){
-			if(xhttp.readyState == 4 && xhttp.status == 200){
-				document.getElementById("allQues").innerHTML = xhttp.responseText;
-			}
-		};
-		xhttp.open("GET", "php/load_ques.php", true);
-		xhttp.send();
-		setTimeout(updateQues,3000);
-	}
-	function refresh(q_id, q_vote){
-		var xhttp;
-		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function(){
-			if(xhttp.readyState == 4 && xhttp.status == 200){
-				console.log(xhttp.responseText);
-			}
-		};
-		xhttp.open("POST", "php/updateVote.php", true);
-		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhttp.send("q_id="+q_id+"&q_vote="+q_vote);
-		updateQues();
-	}
-	
 var pre_status = 0;
 var cur_status = 0;
-var count = 0;
 var text = "";
 
 function updatestatus(){
@@ -40,10 +9,10 @@ function updatestatus(){
   	if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
     		pre_ = xmlhttp.responseText;
     		pre_status = parseInt(pre_);
-    		//console.log("pre:"+pre_status);
+    		//console.log(""+pre_);
   		}
 	};
-	xmlhttp.open("GET","txts/prestatus.txt",true);
+	xmlhttp.open("GET","../txts/prestatus.txt",true);
 	xmlhttp.send();
 	
 	var xmlhttp1 = new XMLHttpRequest();
@@ -52,31 +21,48 @@ function updatestatus(){
   	if(xmlhttp1.status == 200 && xmlhttp1.readyState == 4){
     		cur_ = xmlhttp1.responseText;
     		cur_status = parseInt(cur_);
-    		//console.log("cur:"+cur_);
+    		//console.log(""+cur_);
   		}
 	};
-	xmlhttp1.open("GET","txts/curstatus.txt",true);
+	xmlhttp1.open("GET","../txts/curstatus.txt",true);
 	xmlhttp1.send();
 	//setTimeout(updatestatus, 2000);
-	//console.log(""+pre_status+""+cur_status);
+	//console.log(""+cur_status+""+pre_status);
+}
+
+function changestatus(){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function(){
+  	if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+  		}
+	};
+	xmlhttp.open("POST", "updatepre.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("pres="+pre_status);
+	
+	var xmlhttp0 = new XMLHttpRequest();
+	xmlhttp0.onreadystatechange = function(){
+  	if(xmlhttp0.status == 200 && xmlhttp0.readyState == 4){
+  		}
+	};
+	xmlhttp0.open("POST", "updatecur.php", true);
+	xmlhttp0.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp0.send("curs="+cur_status);
+	updatestatus();
+	console.log(""+pre_status+""+cur_status);
 }
 
 function clicked(){
-	//console.log(""+pre_status+""+cur_status);
 	updatestatus();
-	if (cur_status == 1){
-		if(count < 1){
-			swal("GO DIE!!!");	
-			console.log("show");
-			count++;
-		}
-	}else{
-		count = 0;
-		swal.enableButtons();
-		console.log("done");
+	//console.log("click:"+pre_status+""+cur_status);
+	cur_status = 1;
+	if (pre_status == 0 && cur_status == 1){
+		pre_status = 1;	
+		var popup_status = "<?php print('haha'); ?>";
+		swal(""+cur_status+""+pre_status);	
+		changestatus();
+		//console.log("pop:"+pre_status+""+cur_status);
 	}
-	//console.log(count);
-	setTimeout(clicked, 500);
 }
 
 ;(function(window, document, undefined) {
@@ -249,7 +235,7 @@ exports['default'] = sweetAlert = swal = function () {
   };
 
   // Show alert with enabled buttons always
-  swal.disableButtons();
+  swal.enableButtons();
 };
 
 /*
@@ -271,8 +257,7 @@ sweetAlert.setDefaults = swal.setDefaults = function (userParams) {
  * Animation when closing modal
  */
 sweetAlert.close = swal.close = function () {
-	//cur_status = 0;
-	count=0;
+	cur_status = 0;
   var modal = _sweetAlertInitialize$getModal$getOverlay$getInput$setFocusStyle$openModal$resetInput$fixVerticalPosition.getModal();
 
   _hasClass$addClass$removeClass$escapeHtml$_show$show$_hide$hide$isDescendant$getTopMargin$fadeIn$fadeOut$fireClick$stopEventPropagation.fadeOut(_sweetAlertInitialize$getModal$getOverlay$getInput$setFocusStyle$openModal$resetInput$fixVerticalPosition.getOverlay(), 5);
@@ -314,8 +299,8 @@ sweetAlert.close = swal.close = function () {
   }
   lastFocusedButton = undefined;
   clearTimeout(modal.timeout);
-	//pre_status = 0;
-	//changestatus();
+	pre_status = 0;
+	changestatus();
   return true;
 };
 
@@ -1367,4 +1352,3 @@ exports.colorLuminance = colorLuminance;
   }
 
 })(window, document);
-	

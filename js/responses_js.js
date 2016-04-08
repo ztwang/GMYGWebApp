@@ -21,7 +21,7 @@
 		};
 		xhttp.open("GET", "../php/facts_php.php", true);
 		xhttp.send();
-		setTimeout(updateFacts, 2000);
+		setTimeout(updateFacts, 3500);
 	}
 	
 	function updateContents(){

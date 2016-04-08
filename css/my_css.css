@@ -16,15 +16,14 @@ header{
 	position: fixed;
 	top:0;
 	z-index: 100;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 1px;
+	padding-right: 1px;
 }
 .header-au{
 	font-size: 20px;
 }
 .headers{
 	text-align: center;
-	padding-top: 20px;
 }
 .header-left{
 	float: left;
@@ -32,18 +31,24 @@ header{
 .header-right{
 	float: right;
 }
+.header-center{
+	padding-top:5px;
+	padding-left: 7%;
+	float: left;
+}
 .header{
 	text-align: center;
 	font-style: bold;
 }
 .show-ques{
+	position:fixed;
    	width:100%;
-   	height: 390px;
+   	height: 80%;
     overflow-y: scroll;
 }
 .f-bottom{
 	position:fixed;
-   	bottom:3%;
+   	bottom:0;
    	width:100%;
    	height:10%;
 }

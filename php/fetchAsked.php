@@ -1,16 +1,18 @@
 <?php
 	session_start();
 	$usr_id = $_SESSION['usr_id'];
-	/*$servername = "localhost";
+	
+	$servername = "localhost";
 	$username = "root";
 	$password = "ignite";
-	$dbname = "ignite";*/
-	$threshold = 1;
+	$dbname = "ignite";
 	
-	$servername = "58.64.190.104";
+	/*$servername = "58.64.190.104";
 	$username = "sq_ivyhhhhh";
 	$password = "whan1Whan1";
-	$dbname = "sq_ivyhhhhh";
+	$dbname = "sq_ivyhhhhh";*/
+	
+	$threshold = -1;
 
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
 

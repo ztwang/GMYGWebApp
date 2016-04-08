@@ -15,8 +15,32 @@
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../bootstrap/docs/examples/signin/signin.css" rel="stylesheet">
-    <link href="css/projector_css.css" rel="stylesheet">
+    <!--link href="css/projector_css.css" rel="stylesheet"-->
   </head>
+  <style>
+.div-ques {
+  float: left;
+  width: 30%;
+  font-size: 25px;
+}
+.div-responses {
+  float: left;
+  width: 45%;
+  font-size: 25px;
+}
+.div-facts {
+  float: left;
+  width: 25%;
+  font-size: 25px;
+}
+.proj-header{
+	font-size:28px;
+	text-align: center;
+}
+.vote-btn-td{
+	width: 3%;
+}
+  </style>
 <body onload="updateContents();">
 <p style="font-size: 50px; padding-top:0px; text-align: center" class="change-color-btn">
 	<a href="#" role="button" id="plus" onclick="bgplus()">+</a>
@@ -24,10 +48,21 @@
 	<a href="#" role="button" id="minus" onclick="bgminus()">-</a>
 </p>
 <section class="div-container">
+	<div class="div-ques" id="div-ques-id">
+		<form method="post" action="php/adminQ.php">
+			<p class='proj-header'>add ques</p>
+			<input class="form-control" id="q_input" type="text" name="ques" /><br>
+			<input class="btn btn-lg btn-danger btn-block" type="submit" value="Add Question" name="addQ" />
+		</form>
+	
+		<h3>Questions</h3>
+		<p id="allQues"></p>
+	</div>
+	
 	<div class="div-responses" id="div-resp-id">
 		<div class="div-content">
-			<p class='proj-header'>Questions</p>
-			<p id="allQues"></p>
+			<p class='proj-header'>on proj ques</p>
+			<p id="onprojques"></p>
 		</div>
 	</div>
 	<div class="div-facts" id="div-fact-id">
@@ -39,5 +74,4 @@
 </section>
 </body>
 <script src="js/projector_q_js.js"></script>
-<script src="js/shown_js.js"></script>
 </html>
