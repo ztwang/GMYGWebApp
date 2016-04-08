@@ -33,6 +33,7 @@
 		<div class="div-content">
 			<h4 style="text-align: center">Link: http://goo.gl/N0a0EV</h4>
 			<p class='proj-header'>Questions</p>
+			 <p id="timer_display"></p>
 			<p id="allQues"></p>
 		</div>
 	</div>
@@ -47,4 +48,5 @@
 </body>
 <script src="../js/responses_js.js"></script>
 <script src="../js/shown_js.js"></script>
+<script src="../js/projector_timer.js"></script>
 </html>
