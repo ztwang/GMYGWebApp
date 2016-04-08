@@ -12,7 +12,7 @@ function updatestatus(){
     		//console.log(""+pre_);
   		}
 	};
-	xmlhttp.open("GET","../txts/prestatus.txt",true);
+	xmlhttp.open("GET","txts/prestatus.txt",true);
 	xmlhttp.send();
 	
 	var xmlhttp1 = new XMLHttpRequest();
@@ -24,7 +24,7 @@ function updatestatus(){
     		//console.log(""+cur_);
   		}
 	};
-	xmlhttp1.open("GET","../txts/curstatus.txt",true);
+	xmlhttp1.open("GET","txts/curstatus.txt",true);
 	xmlhttp1.send();
 	//setTimeout(updatestatus, 2000);
 	//console.log(""+cur_status+""+pre_status);
@@ -36,7 +36,7 @@ function changestatus(){
   	if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
   		}
 	};
-	xmlhttp.open("POST", "updatepre.php", true);
+	xmlhttp.open("POST", "alert/updatepre.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("pres="+pre_status);
 	
@@ -45,7 +45,7 @@ function changestatus(){
   	if(xmlhttp0.status == 200 && xmlhttp0.readyState == 4){
   		}
 	};
-	xmlhttp0.open("POST", "updatecur.php", true);
+	xmlhttp0.open("POST", "alert/updatecur.php", true);
 	xmlhttp0.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp0.send("curs="+cur_status);
 	updatestatus();

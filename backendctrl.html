@@ -16,6 +16,8 @@
     <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../bootstrap/docs/examples/signin/signin.css" rel="stylesheet">
     <!--link href="css/projector_css.css" rel="stylesheet"-->
+    <script src="alert/sweetalert-dev.js"></script>
+  	<link rel="stylesheet" href="alert/sweetalert.css">
   </head>
   <style>
 .div-ques {
@@ -42,6 +44,10 @@
 }
   </style>
 <body onload="updateContents();">
+<div class="ui">
+	<button class="btn btn-lg btn-danger btn-block">Listen!</button>
+</div>
+
 <p style="font-size: 50px; padding-top:0px; text-align: center" class="change-color-btn">
 	<a href="#" role="button" id="plus" onclick="bgplus()">+</a>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -74,4 +80,9 @@
 </section>
 </body>
 <script src="js/projector_q_js.js"></script>
+<script>
+document.querySelector('div.ui button').onclick = function(){
+	clicked();
+};
+</script>
 </html>

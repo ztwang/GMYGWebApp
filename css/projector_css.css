@@ -8,12 +8,12 @@ html, body, section, div {
     to {background-color: rgba(255, 100, 100, 0.5);}
 }
 
-body {
+section {
   color: #382312;
   font-family: sans-serif;
   font-size: 1.25rem;
-  line-height: 150%;
   text-shadow: 0 3px 3px #ffffff;
+  z-index: -1;
 }
 
 /* Pattern styles */

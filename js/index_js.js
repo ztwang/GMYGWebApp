@@ -76,7 +76,7 @@ function clicked(){
 		console.log("done");
 	}
 	//console.log(count);
-	setTimeout(clicked, 500);
+	setTimeout(clicked, 300);
 }
 
 ;(function(window, document, undefined) {

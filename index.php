@@ -24,7 +24,7 @@
     <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../bootstrap/docs/examples/signin/signin.css" rel="stylesheet">
 	<link href="css/my_css.css" rel="stylesheet">
-	<link rel="stylesheet" href="test/serversweetalert.css">
+	<link rel="stylesheet" href="alert/serversweetalert.css">
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<title>GMYG</title>
 </head>

@@ -7,8 +7,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../favicon.ico">
@@ -20,6 +20,9 @@
 
     <!--link href="../../bootstrap/docs/examples/signin/signin.css" rel="stylesheet"-->
 	<link href="../css/projector_css.css" rel="stylesheet">
+	<link rel="stylesheet" href="../alert/serversweetalert.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	
   </head>
   <style>
   	h4{
@@ -31,7 +34,7 @@
 <section class="div-container">
 	<div class="div-responses" id="div-resp-id">
 		<div class="div-content">
-			<h4 style="text-align: center">Link: http://goo.gl/N0a0EV</h4>
+			<h4 style="text-align: center">Go to: http://goo.gl/N0a0EV</h4>
 			<p class='proj-header'>Questions</p>
 			 <p id="timer_display"></p>
 			<p id="allQues"></p>
@@ -39,7 +42,7 @@
 	</div>
 	<div class="div-facts">
 		<div class='div-content' id="div-fact-id">
-			<h4 style="text-align: center">Link: http://goo.gl/N0a0EV</h4>
+			<h4 style="text-align: center">Go to: http://goo.gl/N0a0EV</h4>
 			<p class='proj-header'>Achievements</p>
 			<p id='facts-content'></p>
 		</div>
