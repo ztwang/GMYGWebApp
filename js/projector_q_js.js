@@ -15,7 +15,7 @@
 		};
 		xhttp.open("GET", "php/allQues.php", true);
 		xhttp.send();
-		setTimeout(updateQues, 3000);
+		setTimeout(updateQues, 2000);
 	}
 	
 	function refreshAllQ(q_id){

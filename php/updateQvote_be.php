@@ -19,8 +19,6 @@
     	die("Connection failed: " . mysqli_connect_error());
 	}
 	
-	console.log("in");
-	
 	$q_vote = (int)$q_vote+1;
 	$q_id=(int)$q_id;
 	

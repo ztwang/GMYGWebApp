@@ -43,7 +43,7 @@
     	    <table class='table table-hover'>
        		 	<thead>
         		<tr>
-	        		<th class='content-td' style='font-size:20px'>Linda Asks:️</th>
+	        		<th class='content-td' style='font-size:20px'>Linda Asks</th>
    		     		<th class='v-btn-td'>Votes</th>
    		     		<th class='v-btn-td'></th>
    		     	</tr>
